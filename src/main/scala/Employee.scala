@@ -11,6 +11,7 @@ object Employee {
       .appName("emp")
       .getOrCreate()
 
+    // Reading input data
     val raw = spark.read.json("D:/EmployeeChallenge/input.json")
 
     val colRen = raw.withColumnRenamed("Permanent address", "Permanent_address")
